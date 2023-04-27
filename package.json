@@ -1,0 +1,71 @@
+{
+  "name": "speechly",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@speechly/react-client": "0.0.4",
+    "@speechly/react-ui": "^1.0.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "chart.js": "^2.9.4",
+    "react": "^17.0.1",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "uuid": "^8.3.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "postbuild": "rimraf build/**/*.map",
+   "test": "react-scripts --openssl-legacy-provider test --coverage --coverageDirectory=output/coverage/jest",
+    "coverage:dev": "react-scripts --openssl-legacy-provider test --coverage --watchAll",
+    "coverage:prod": "react-scripts --openssl-legacy-provider test --coverage",
+    "eject": "react-scripts --openssl-legacy-provider eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!coverage/**",
+      "!node_modules/**",
+      "!src/index.js",
+      "!src/setupTests.js",
+      "!public/**",
+      "!build/**"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "json",
+      "text",
+      "clover",
+      "cobertura"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.18.6",
+    "@babel/preset-react": "^7.18.6"
+  }
+}
